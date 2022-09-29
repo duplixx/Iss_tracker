@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Preloader from './components/Preloader';
 import Canvas_moon from './Pages/Canvas_moon';
 import Home_page from './Pages/Home_page';
-import Dmoon from './Pages/tiledmoon.js'
 const App = () => {
   const [loader, setLoader] = useState(false)
   useEffect(() => {
