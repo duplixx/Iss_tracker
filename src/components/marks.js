@@ -1,8 +1,9 @@
-import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html } from '@react-three/drei';
+import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html, Line } from '@react-three/drei';
 import axios from 'axios';
 import React, { useState,useEffect } from 'react';
 import { Side } from 'three';
 import data from '../assets/data';
+import { Satellite } from './satellite';
 
 export default function Marks(props) {
     const [lat,setLat]=useState(0);
@@ -40,18 +41,30 @@ export default function Marks(props) {
 
 
         return (
-            <mesh visible position={[0.05+x,y, z]} layers={0}  >
-                <sphereBufferGeometry args={[0.04, 35, 32]} scale={2} />
-                <meshBasicMaterial color="red" shadowSide={true}  />
-                <Html>
-                    <div className="text-white text-2xl">
-                        <label className='border-2xl border-2 rounded-2xl' >
-                            Iss 
-                        </label>
-                    </div>
+            <mesh visible position={[x,1+y,1+z]} layers={0}   >
+                <Satellite  layers={0} />
+                <Html occluded>
+                    <span className="text-white mt-5 font-bold text-2xl rotate-160 animate-ping  ">
+                        <h>.</h>
+                        <h>.</h>
+                        <h>.</h>
+                    </span>
                 </Html>
+                 
             </mesh>
+            
         )
+        // <QuadraticBezierLine points={[0,0,0,x,y,z]} layers={0}
+        //         color={'red'}
+        //         lineWidth={3}
+        //         start={[x,y,0]}
+        //         dashed={true}
+        //         segments={100}
+        //         end={[x,y,z]}
+
+        //          /> 
+
+        
 
 
 };

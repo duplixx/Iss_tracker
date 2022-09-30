@@ -14,7 +14,7 @@ export default function MappedMoon() {
     const moonBumpMap= useLoader(TextureLoader,moonBumpTexture);
   return (
     <>
-        <Sphere position={[0,0,0]} rotation={[-0.30,0,0]} visible args={[1, 200, 200]} layers={0}>
+        <Sphere position={[0,0,0]} rotation={[-0.20,0,0]} visible args={[1, 200, 200]} layers={0}>
             <meshPhongMaterial map={colorMap} bumpMap={moonBumpMap} roughness={3} bumpScale={0.08} />
         </Sphere>
     </>

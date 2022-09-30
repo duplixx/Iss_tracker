@@ -90,9 +90,9 @@ export default function Gloobe() {
         objectThreeObject={
           () => (
             <Canvas>
-            <Sphere args={[0.5, 32, 32]}>
-              <meshBasicMaterial attach="material" color="red" />
-            </Sphere>
+              <Sphere args={[0.5, 32, 32]}>
+                <meshBasicMaterial attach="material" color="red" />
+              </Sphere>
             </Canvas>
           )
         }
