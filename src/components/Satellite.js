@@ -1,10 +1,10 @@
-import React, { useRef } from 'react'
-import { PerspectiveCamera, useGLTF } from '@react-three/drei'
+import React from 'react';
+import { useGLTF } from '@react-three/drei';
 
 export function Satellite(props) {
   const { nodes, materials } = useGLTF('/satellite.gltf')
   return (
-    <group dispose={null} scale={[0.01,0.01,0.01]} layers={0} rotation={[30,0,-50]} enableShadow={true}>
+    <group dispose={null} scale={[0.01,0.01,0.01]} layers={0} rotation={[-30,0,0]} enableShadow={true}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group position={[7.01, 0, -3.77]}>

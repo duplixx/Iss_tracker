@@ -41,14 +41,14 @@ export default function Marks(props) {
 
 
         return (
-            <mesh visible position={[x,1+y,1+z]} layers={0}   >
-                <Satellite  layers={0} />
+            <mesh visible position={[x,0.2+y,0.2+z]} layers={0}   >
+            <Satellite  layers={0} />
                 <Html occluded>
-                    <span className="text-white mt-5 font-bold text-2xl rotate-160 animate-ping  ">
-                        <h>.</h>
-                        <h>.</h>
-                        <h>.</h>
+                    <span className="font-bold animate-ping blur-sm absolute scale-50 ">
+                        <h1 className='absolute rounded-full  p-1 border-white border-4 border-black'></h1>
+                        <h1 className='absolute rounded-full  p-2 border-gray-200 border-2 delay-200'></h1>
                     </span>
+                    
                 </Html>
                  
             </mesh>

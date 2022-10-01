@@ -10,7 +10,7 @@ import { BackSide } from 'three';
 export default function MappedMoon() {
     const colorMap=useLoader(TextureLoader,galaxyTexture);
   return (
-    <>  
+    <>
         <mesh layers={1}>
           <Sphere args={[80, 64, 64]}>
             <meshBasicMaterial map={colorMap} side={BackSide} transparent={true} />
