@@ -14,6 +14,9 @@ export default function Hero() {
     gsap.registerPlugin(ScrollTrigger)
 
     useEffect(() => {
+
+        // Hero Section title(ISS) animation from -180px to 0 px
+
         gsap.fromTo(".title_div", { y: -180, opacity: 0 }, {
             y: 0,
             opacity: 1,
@@ -23,6 +26,9 @@ export default function Hero() {
 
 
         // About Section 
+
+
+        // Section 2 background animation on scroll grey --> black
 
         gsap.to(".section2", {
             scrollTrigger: {
@@ -36,6 +42,9 @@ export default function Hero() {
             color: 'white',
             duration: 3,
         });
+
+        // Section 2 title scale+x-axis animation 
+
         gsap.fromTo(".section2_title", { x: -180, opacity: -1, scale: 0.4 }, {
             scrollTrigger: {
                 trigger: ".left_section2",
@@ -47,6 +56,9 @@ export default function Hero() {
             scale: 1,
             duration: 2
         });
+
+
+
         // let array = []
         // array = [".small_title", ".next_small_title"]
         // // array.push(".small_title")
@@ -64,6 +76,11 @@ export default function Hero() {
         //     });
         // }) 
         //Learned new thing
+
+
+        // Team Section title animation (using array to target all the class)
+
+
         let array = []
         array = ["left_section_title1", "left_section_title2", "p"]
         array.map((item, i) => {
@@ -80,6 +97,9 @@ export default function Hero() {
             console.log(i)
         })
 
+
+        // Team section - Team members card animation of scale and opacity on scroll
+
         gsap.fromTo(".right_team_section", { scale:0.4, opacity: 0 }, {
             scrollTrigger: {
                 trigger: ".team_section",
@@ -94,12 +114,14 @@ export default function Hero() {
         });
 
         // Story Section 
+
+
+        // Story section to show hiding effect on scroll 
+
         gsap.fromTo(".story_section", {opacity:1.9}, {
             scrollTrigger:{
                 trigger:".story_section",
                 toggleActions: "restart pause pause pause", scrub: 1,
-                // pinSpacing: false,
-                // pin: true,
             },
             opacity:0,
             ease: "none",
@@ -107,10 +129,10 @@ export default function Hero() {
             duration:0.1
         })
         
-        // Cursor Section 
     }, [])
 
-
+    // Using state to animate hero section 
+    // to basically hide video and to replace it with image components 
 
     const [show, setShow] = useState(false)
     useEffect(() => {
@@ -122,6 +144,10 @@ export default function Hero() {
 
 
     // Team Section 
+
+
+    // To add drag effect in horizontal scroll section
+
     const slider = document.querySelector('.team_section');
 
     let mouseDown = false;
@@ -160,40 +186,42 @@ export default function Hero() {
                     <h1 className="title self-start">
                         Iss Tracker
                     </h1>
-                    <a className="_button flex hover:justify-between" onClick={()=>navigate(`/mainPage`)} >Track Iss <AiOutlineArrowRight className="inline-block " />  </a>
+                    <a className="_button flex hover:justify-between" onClick={()=>navigate(`/mainPage`)} >Track Iss <AiOutlineArrowRight className="inline-block self-center" />  </a>
                 </div>
                 {
                     show &&
-                    // <div className="hero_vid">
+
                         <video className="hero_vid" autoPlay muted>
                             <source src={vid} type="video/mp4" />
                         </video>
-                    // </div>
+
                 }
                 {
                     !show &&
                     <ParallaxProvider>
 
-                        {/* <section className="section"> */}
+
 
                             <div className="img1" id="home">
-                                {/* <img className="star" src={img1} id="star" alt="star" /> */}
+
                             </div>
                             <Parallax className="img2" translateY={[0, -40]}>
-                                {/* <img className="idk" src={img2} id="idk" alt="idk" /> */}
                             </Parallax>
                             <Parallax className="img3" translateX={[35, -40]}>
-                                {/* <img className="hero" id="hero" src={img3} alt="hero" /> */}
                             </Parallax>
                             <Parallax translateY={[40, -80]} translateX={[30,-30]} className="img4">
-                                {/* <img className="earth" id="earth" src={img4} alt="earth" /> */}
                             </Parallax>
-                        {/* </section> */}
                     </ParallaxProvider>
                 }
             </div>
             {/* Hero Section Ends  */}
+
+
+
             {/* About Section Starts  */}
+
+
+
             <div className="section2" id="about" >
                 <div className="left_section2" >
                     <h1 className="section2_title">About</h1>
@@ -220,14 +248,32 @@ export default function Hero() {
                 </div>
             </div>
             {/* About Section Ends  */}
+
+
             {/* Story Section Starts  */}
+
+
             <Story/>
+
+
             {/* Story Section Ends  */}
+
+
             {/* Team Section Starts  */}
+
+
             <Team />
+
+
             {/* Team Section Ends  */}
+
+
             {/* Footer Section Starts  */}
+
+
             <Footer/>
+
+            
             {/* Footer Section Ends  */}
         </>
     )

@@ -46,7 +46,7 @@ $background-color_1: red;
 			left: 0;
 			background-color: $background-color_1;
 			transform-origin: bottom left;
-			animation: mymove 16s 1;
+			animation: mymove 5s 1;
 		}
 	}
 	.model {
@@ -60,8 +60,8 @@ $background-color_1: red;
 			left: 0;
 			background-color: $background-color_1;
 			transform-origin: bottom left;
-			animation: mymove 16s 1;
-			animation: mymove 10s 1;
+			animation: mymove 4s 1;
+			animation: mymove 5s 1;
 		}
 	}
 }

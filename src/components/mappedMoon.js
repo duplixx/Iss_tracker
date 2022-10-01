@@ -5,7 +5,7 @@ import moonTexture from '../assets/img/earth_large.jpg';
 import moonBumpTexture from '../assets/img/bump-large.jpg';
 import { useLoader } from '@react-three/fiber';
 import data from '../assets/data';
-// import vertextShader from '../assets/shaders/vertex.glsl';
+
 
 
 
