@@ -1,8 +1,8 @@
-import mihir_img from "../images/mihir.png"
+import mihir_img from "../images/mihir.jpg"
 import shekhar_img from "../images/shekhar.jpg"
 import anshul_img from "../images/anshul.jpg"
-import sankalp_img from "../images/sankalp.jpeg"
-import jasmine_img from "../images/jasmine.jpeg"
+import sankalp_img from "../images/sankalp.jpg"
+import jasmine_img from "../images/jasmine.jpg"
 
 export default [
   {
@@ -30,7 +30,7 @@ export default [
     "INSTAGRAM": "https://www.instagram.com/sri_sankalp.13/",
     "DOMAIN": "Wed Dev",
     "PICTURE": `${sankalp_img}`,
-    "Description" : "I'm Introvert"
+    "Description" : "Passionate about my work"
   },
   {
     "NAME": "Anshul dwivedi",
@@ -39,7 +39,7 @@ export default [
     "INSTAGRAM": "https://www.instagram.com/",
     "DOMAIN": "Pitching/Presenter",
     "PICTURE": `${anshul_img}`,
-    "Description" : "I'm Introvert"
+    "Description" : "Imperfectly / Perfect"
   },
   {
     "NAME": "Jasmine Agarwal",
@@ -48,7 +48,7 @@ export default [
     "INSTAGRAM": "https://www.instagram.com/_jasmineagrawal/",
     "DOMAIN": "Pitching/Presenter",
     "PICTURE": `${jasmine_img}`,
-    "Description" : "I'm Introvert"
+    "Description" : "Quite an explorer, fun loving, calm yet feisty"
   },
   
 ]
