@@ -156,7 +156,7 @@ export default function Hero() {
             <div className="hero_section">
                 <div className="title_div">
                     <h1 className="title">
-                        ISS Tracker
+                        Iss Tracker
                     </h1>
                     <a className="_button" >Track Iss</a>
                 </div>
