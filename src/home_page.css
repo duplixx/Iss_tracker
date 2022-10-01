@@ -7,6 +7,7 @@
 @import url('http://fonts.cdnfonts.com/css/dash-horizon');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 
 body {
   overflow: visible;
@@ -47,9 +48,10 @@ body {
 /*  */
 
 ._button {
-  display: inline-block;
+  /* display: inline-block; */
+  width: max-content;
   margin-top: 20px;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 22px;
   text-align: center;
   text-transform: uppercase;
@@ -165,6 +167,11 @@ body {
 .title_div {
   z-index: 3;
   padding: 0 10px;
+  display: flex;
+  height: 90vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero_vid {
@@ -240,8 +247,8 @@ body {
   flex-direction: column;
   font-family: 'Poppins', monospace;
   gap: 10px;
-  text-align: justify;
-  line-height: 35px;
+  /* text-align: justify; */
+  /* line-height: 35px; */
 }
 
 .left_section2 .section2_title {
@@ -254,7 +261,7 @@ body {
 
 .right_section2 h6 {
   font-weight: 600;
-  font-size: 29px;
+  font-size: 22px;
   letter-spacing: 2px;
 }
 
@@ -267,14 +274,14 @@ body {
 
 .right_section2 .first_p {
   width: 62%;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   /* font-family: 'Space Mono', monospace; */
 }
 
 .right_section2 .last_p {
   width: 69%;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 500;
   /* font-family: 'Space Mono', monospace; */
 }

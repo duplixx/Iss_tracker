@@ -6,7 +6,8 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax"
 import Team from "./Team"
 import Footer from "./Footer"
 import Story from "./Story-section"
-
+import { useNavigate } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai"
 export default function Hero() {
 
 
@@ -150,15 +151,16 @@ export default function Hero() {
         slider.addEventListener('mouseleave', stopDragging, false);
     }
     // Team section ends 
+    const navigate = useNavigate()
     return (
         <>
             {/* Hero Section Starts */}
             <div className="hero_section">
                 <div className="title_div">
-                    <h1 className="title">
+                    <h1 className="title self-start">
                         Iss Tracker
                     </h1>
-                    <a className="_button" >Track Iss</a>
+                    <a className="_button flex hover:justify-between" onClick={()=>navigate(`/mainPage`)} >Track Iss <AiOutlineArrowRight className="inline-block " />  </a>
                 </div>
                 {
                     show &&
