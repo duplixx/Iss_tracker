@@ -20,8 +20,8 @@ export default function Preloader() {
           <source src={loader} type="video/mp4" />
         </video>
         <div className="loading_content">
-          { count < 15 && <h1 className="scripts">Loading Scripts... {count}/15</h1>}
-          {count >= 15 && <h1 className="model">Loading Model... {count-15}/9</h1>}
+          { count <= 5 && <h1 className="scripts">Loading Scripts... {count}/5</h1>}
+          {count > 5 && <h1 className="model">Loading Model... {count-5}/5</h1>}
         </div>
       </div>
     </>
