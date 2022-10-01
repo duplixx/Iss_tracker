@@ -6,7 +6,7 @@ import Home_page from './iss_Pages/Home_page';
 const App = () => {
   const [loader, setLoader] = useState(false)
   useEffect(() => {
-    setLoader(true)
+    setLoader(false)
     setTimeout(() => {
       setLoader(false)
     }, 11000);

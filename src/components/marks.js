@@ -44,7 +44,7 @@ export default function Marks(props) {
             <mesh visible position={[x,0.2+y,0.2+z]} layers={0}   >
             <Satellite  layers={0} />
                 <Html occluded>
-                    <span className="font-bold  animate-ping blur-sm absolute scale-50 ">
+                    <span className="font-bold animate-ping blur-sm absolute scale-50 ">
                         <h1 className='absolute rounded-full  p-1 border-white border-4 border-black'></h1>
                         <h1 className='absolute rounded-full  p-2 border-gray-200 border-2 delay-200'></h1>
                     </span>
