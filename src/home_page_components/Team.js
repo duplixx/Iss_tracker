@@ -11,7 +11,7 @@ export default function Team() {
                 <Tilt>
                     <img src={item.PICTURE} className="profile_img" alt="img" />
                 </Tilt>
-                <h3>{item.NAME} </h3><span>+{item.DOMAIN}</span>
+                <h3>{item.NAME} </h3><span className="text-lg">+{item.DOMAIN}</span>
                 <hr />
                 <p className="team_des">{item.Description}</p>
                 <div class="icon">
