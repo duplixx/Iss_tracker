@@ -28,15 +28,20 @@ export default function Canvas_moon() {
                         </OrthographicCamera>
                     </Suspense>
                 </Canvas>
+                <span className='home_button'>
+                    <SpeedoMeter/>
+                </span>
                 <div className='home_button'
                 onClick = {() => navigate(`/homepage`)}
                 ><h1>Stellium </h1><span>
                     <BiRocket />
                 </span>
                 </div>
+                
             </div>
 
             
         </>
     )
 }
+

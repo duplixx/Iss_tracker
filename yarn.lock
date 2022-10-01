@@ -2123,6 +2123,18 @@
   dependencies:
     "@types/node" "*"
 
+"@types/d3-path@^1":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@types/d3-path/-/d3-path-1.0.9.tgz#73526b150d14cd96e701597cbf346cfd1fd4a58c"
+  integrity sha512-NaIeSIBiFgSC6IGUBjZWcscUJEq7vpVu7KthHN8eieTV9d9MqkSOZLH4chq1PmcKy06PNe3axLeKmRIyxJ+PZQ==
+
+"@types/d3-shape@^1.3.2":
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/@types/d3-shape/-/d3-shape-1.3.8.tgz#c3c15ec7436b4ce24e38de517586850f1fea8e89"
+  integrity sha512-gqfnMz6Fd5H6GOLYixOZP/xlrMtJms9BaS+6oWxTKHNqPGZ93BkWWupQSCYm6YHqx6h9wjRupuJb90bun6ZaYg==
+  dependencies:
+    "@types/d3-path" "^1"
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
   resolved "https://registry.yarnpkg.com/@types/eslint-scope/-/eslint-scope-3.7.4.tgz#37fc1223f0786c39627068a12e94d6e6fc61de16"
@@ -4056,6 +4068,11 @@ d3-geo-voronoi@^2.0:
   dependencies:
     d3-color "1 - 3"
 
+d3-path@1:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/d3-path/-/d3-path-1.0.9.tgz#48c050bb1fe8c262493a8caf5524e3e9591701cf"
+  integrity sha512-VLaYcn81dtHVTjEHd8B+pbe9yHWpXKZUC87PzoFmsFrJqgFwDe/qxfp5MlfsfM1V5E/iVt0MmEbWQ7FVIXh/bg==
+
 "d3-scale@1 - 4", d3-scale@4:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/d3-scale/-/d3-scale-4.0.2.tgz#82b38e8e8ff7080764f8dcec77bd4be393689396"
@@ -4066,6 +4083,13 @@ d3-geo-voronoi@^2.0:
     d3-interpolate "1.2.0 - 3"
     d3-time "2.1.1 - 3"
     d3-time-format "2 - 4"
+
+d3-shape@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/d3-shape/-/d3-shape-1.3.7.tgz#df63801be07bc986bc54f63789b4fe502992b5d7"
+  integrity sha512-EUkvKjqPFUAZyOlhY5gzCxCeI0Aep04LwIRpsZ/mLFelJiUfnK56jo5JMDSE7yyP2kLSb6LtF+S5chMk7uqPqw==
+  dependencies:
+    d3-path "1"
 
 "d3-time-format@2 - 4":
   version "4.1.0"
@@ -7469,6 +7493,11 @@ nth-check@^2.0.1:
   dependencies:
     boolbase "^1.0.0"
 
+numeral@^1.5.3:
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/numeral/-/numeral-1.5.6.tgz#3831db968451b9cf6aff9bf95925f1ef8e37b33f"
+  integrity sha512-ajp+xurmcvkOLZURhHP2O7AyyF+v2xQDeCODlzALrNeAQnriYaWu0c8I/mu985WaVl2O2lgdOt0QgQHlCAQ3UA==
+
 nwsapi@^2.2.0:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/nwsapi/-/nwsapi-2.2.2.tgz#e5418863e7905df67d51ec95938d67bf801f0bb0"
@@ -8580,6 +8609,11 @@ raf@^3.4.1:
   dependencies:
     performance-now "^2.1.0"
 
+randgen@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/randgen/-/randgen-0.1.0.tgz#4c8dd60d72c013953d2dc63f6e0f4193072408a8"
+  integrity sha512-z0xKLFpnQdh+HxSDrR71trUqR/U8OnPUU3FYRXdZDr3sw99+scgFIZmwSHbR2L//sgX5oq9opfZTkC5v1WCkoQ==
+
 randombytes@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz#df6f84372f0270dc65cdf6291349ab7a473d4f2a"
@@ -8620,6 +8654,15 @@ react-app-polyfill@^3.0.0:
     raf "^3.4.1"
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
+
+react-chart@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/react-chart/-/react-chart-0.0.1.tgz#7f472678b64e43ca2c09df16fea724784630bb90"
+  integrity sha512-w8jDwwueQ05KuKV0NprsJe5cXsk5UlZKUYHXTXAn6LK34dBBtDN4dxLtpHfq0jttbLoVNsColmc0MuhiE4Amhw==
+  dependencies:
+    numeral "^1.5.3"
+    randgen "^0.1.0"
+    react "~0.10.0"
 
 react-chartjs-2@^4.3.1:
   version "4.3.1"
@@ -8851,6 +8894,14 @@ react-scroll@^1.8.7:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
+react-svg-curve@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-svg-curve/-/react-svg-curve-0.2.1.tgz#b6497cdc602b295abad20e728a51c7a83ee51c2f"
+  integrity sha512-u/EgMSn//XOg/eneMQxNjVR3L1olzOF0qiGoAtbLNG3pfqmJTJc+c6S+lD0TyOyy849oZDEpYY1F75npHMHtBA==
+  dependencies:
+    "@types/d3-shape" "^1.3.2"
+    d3-shape "^1.3.7"
+
 react-use-measure@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/react-use-measure/-/react-use-measure-2.1.1.tgz#5824537f4ee01c9469c45d5f7a8446177c6cc4ba"
@@ -8872,6 +8923,11 @@ react@^18.2.0:
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
+
+react@~0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-0.10.0.tgz#8c82753593d3f325ca99d820f7400ab02f1ee1f8"
+  integrity sha512-BJHANYsDIKYPZVKp1qjynvmELGETFvFzGsj1SLPOwRjnm1QtMp38fUcf67uc5T+QBBx29xHcgn3BNVug7/mwBA==
 
 read-cache@^1.0.0:
   version "1.0.0"

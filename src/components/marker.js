@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {  Html} from '@react-three/drei';
 
-export default function Marker({ children, ...props }) {
+export default function Markers({ children, ...props }) {
     const [occluded, occlude] = useState()
     return (
       <Html position={[0, 0, 0.3]}

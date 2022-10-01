@@ -1,14 +1,16 @@
-import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html, Line } from '@react-three/drei';
+import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html, CubicBezierLine } from '@react-three/drei';
 import axios from 'axios';
 import React, { useState,useEffect } from 'react';
 import { Side } from 'three';
 import data from '../assets/data';
 import { Satellite } from './Satellite';
+import { BasisCurve } from 'react-svg-curve';
 
 export default function Marks(props) {
     const [lat,setLat]=useState(0);
     const [lon,setLon]=useState(0);
     const [alt,setAlt]=useState(0);
+    const [occluded, occlude] = useState()
 
 
     useEffect(() => {
@@ -41,28 +43,27 @@ export default function Marks(props) {
 
 
         return (
-            <mesh visible position={[x,0.2+y,0.2+z]} layers={0}   >
+            <mesh visible position={[x,0.2+y,0.5+z]} layers={0}   >
             <Satellite  layers={0} />
-                <Html occluded>
+                <Html occlude
+                onOcclude={occlude}
+                style={{ transition: 'all 0.2s', opacity: occluded ? 0 : 1, transform: `scale(${occluded ? 0.05 : 1})` }}
+                >
                     <span className="font-bold animate-ping blur-sm absolute scale-50 ">
-                        <h1 className='absolute rounded-full  p-1 border-white border-4 border-black'></h1>
-                        <h1 className='absolute rounded-full  p-2 border-gray-200 border-2 delay-200'></h1>
+                        <h1 className='absolute rounded-full  p-1 border-white border-4 border-black'/>
+                        <h1 className='absolute rounded-full  p-2 border-gray-200 border-2 delay-200'/>
                     </span>
+                </Html> 
+                <Html>
                     
+
                 </Html>
                  
             </mesh>
             
+            
         )
-        // <QuadraticBezierLine points={[0,0,0,x,y,z]} layers={0}
-        //         color={'red'}
-        //         lineWidth={3}
-        //         start={[x,y,0]}
-        //         dashed={true}
-        //         segments={100}
-        //         end={[x,y,z]}
-
-        //          /> 
+        
 
         
 
