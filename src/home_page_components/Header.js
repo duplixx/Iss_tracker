@@ -11,23 +11,16 @@ export default function Header() {
             <div className="nav-sections" >
                 <ul>
                     <li>
-                       
                             Home
-
                     </li>
                     <li>
-
                             About
-
                     </li>
                     <li>
-
                             Our Story
                     </li>
                     <li>
-
                             Team
-
                     </li>
                 </ul>
             </div>

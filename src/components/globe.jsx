@@ -69,17 +69,6 @@ export default function Gloobe() {
   return (
     <>
       <Globe
-        // globeImageUrl={globeImage}
-        // bumpImageUrl={bumpImage}
-        // backgroundImageUrl={backgroundImage}
-        // arcsData={arcsData}
-        // arcColor={'color'}
-        // arcDashGap={5}
-        // arcDashAnimateTime={5000}
-        // arcStroke={1}
-        // arcCircularResolution={10}
-        // arcAltitude={0.5}
-        // arcLabel={'Iss'}
         pointOfView={[-5,8,1]}
         animateIn={true}
         showGlobe={false}

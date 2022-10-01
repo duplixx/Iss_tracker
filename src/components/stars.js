@@ -4,7 +4,6 @@ import React from 'react';
 import galaxyTexture from '../assets/img/galaxy_4k.png';
 import { useLoader } from '@react-three/fiber';
 import { BackSide } from 'three';
-// import vertextShader from '../assets/shaders/vertex.glsl';
 
 
 
