@@ -6,8 +6,15 @@ import Stars from "../components/stars";
 import Marks from '../components/marks';
 import { useNavigate } from "react-router-dom";
 import { BiRocket } from "react-icons/bi"
+import Modal from "../components/ModalPage"
+import { useState } from "react";
+import "../index.css"
  
 export default function Canvas_page() {
+    const [open, setOpen] = useState(false)
+    const handleClick = () => {
+        setOpen(prev => !prev)
+    }
     const navigate = useNavigate()
     return(
         <>
@@ -17,12 +24,19 @@ export default function Canvas_page() {
                 <ambientLight intensity="0.1" enableShadow={true} />
                 <directionalLight position={[-50, 80, 80]} intensity={0.6}  />
                 <directionalLight position={[10, -80, -80]} color={"black"} intensity={1}  />
-                    <Moon/>
+                    <Moon />
                     <Marks/>
                     <Stars/>
                 <Preload all />
             </Canvas>    
-            <div className='home_button' onClick={()=>navigate(`/`)}><h1>Stellium </h1><span><BiRocket /></span>
+            <div className='home_page'>
+                    {open ?
+                        <Modal onClick={handleClick} /> : null
+                    }
+{/* onClick={handleClick} */}
+                </div>
+            <div className='home_button' onClick={handleClick}  ><h1>Stellium </h1><span><BiRocket /></span>
+            {/* onClick={()=>navigate(`/`)} */}
 </div> 
       </div>
         </>
