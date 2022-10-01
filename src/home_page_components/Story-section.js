@@ -1,5 +1,5 @@
 import React from "react"
-import thumbnail from "../images/thumbnail.webp"
+import thumbnail from "../images/thumbnail.jpeg"
 
 export default function Story() {
     return (
