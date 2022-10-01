@@ -97,8 +97,8 @@ export default function Hero() {
             scrollTrigger:{
                 trigger:".story_section",
                 toggleActions: "restart pause pause pause", scrub: 1,
-                pinSpacing: false,
-                pin: true,
+                // pinSpacing: false,
+                // pin: true,
             },
             opacity:0,
             ease: "none",
