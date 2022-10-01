@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState,useEffect } from 'react';
 import { Side } from 'three';
 import data from '../assets/data';
-import { Satellite } from './satellite';
+import { Satellite } from './Satellite';
 
 export default function Marks(props) {
     const [lat,setLat]=useState(0);
