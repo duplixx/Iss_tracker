@@ -1,55 +1,37 @@
-import React, { Component,useState } from "react";
+import React, { useState,useEffect, Component } from 'react';
 
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0,
-};
-function success(pos) {
-  var crd = pos.coords;
+export default function GeoLocation() {
+    const [lat, setLat] = useState(null);
+    const [lng, setLng] = useState(null);
+    const [status, setStatus] = useState(null);
 
-  console.log("Your current position is:");
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-  
-}
+    useEffect(() => {
+        Coordinates();
+    });
+    // ComponentDidMount(()=>{
+    //     Coordinates();
+    // }
 
-function errors(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
 
-export default class GeoLocation extends Component {
-
-  componentDidMount() {
-    if (navigator.geolocation) {
-      navigator.permissions
-        .query({ name: "geolocation" })
-        .then(function (result) {
-          if (result.state === "granted") {
-            console.log(result.state);
-            //If granted then you can directly call your function here
-            navigator.geolocation.getCurrentPosition(success);
-          } else if (result.state === "prompt") {
-            navigator.geolocation.getCurrentPosition(success, errors, options);
-          } else if (result.state === "denied") {
-            //If denied then you have to show instructions to enable location
-          }
-          result.onchange = function () {
-            console.log(result.state);
-          };
-        });
-    } else {
-      alert("Sorry Not available!");
+    const Coordinates = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                setLat(position.coords.latitude);
+                setLng(position.coords.longitude);
+                setStatus("Location found.");
+            });
+        } else {
+            setStatus("Geolocation is not supported by this browser.");
+        }
     }
-  }
+  return (
+    <>  
+        <h1>Coordinates</h1>
+        <p>{status}</p>
+        {lat && <p>Latitude: {lat}</p>}
+        {lng && <p>Longitude: {lng}</p>}
+    </>
 
-  render() {
-    return (
-      <div className="text-white">
-        <h1>Latitude: </h1>
-        <h1>Longitude: </h1>
-      </div>
-    );
-  }
+    
+  )
 }
