@@ -444,6 +444,20 @@ input {
 
   z-index: 100;
 }
+.map_list{
+  position: absolute;
+  height: 100%;
+  right: 10px;
+  top: 10px;
+}
+.map_list ul{
+  list-style: none;
+  text-decoration: none;
+}
+.map_list ul li{
+  color: white;
+font-size: 20px;
+}
 
 
 .home_button h1, .canvas_button h1{

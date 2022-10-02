@@ -1,5 +1,5 @@
 import React from "react"
-import { CubeCamera, OrbitControls, OrthographicCamera, Preload,group, PerspectiveCamera} from "@react-three/drei";
+import { CubeCamera, OrbitControls, OrthographicCamera, Preload, group, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import Moon from "../components/mappedMoon";
 import Stars from "../components/stars";
@@ -12,41 +12,66 @@ import "../index.css"
 import SpeedoMeter from "../components/speedometer";
 import CurveLine from "../components/curveline";
 import GeoLocation from "../components/geoLocation";
- 
+import { MenuItem, Select } from "@mui/material"
+import { MapState } from "../context";
+
 export default function Canvas_page() {
-    
+
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(prev => !prev)
     }
+    const {age, setAge} = MapState()
+ 
     const navigate = useNavigate()
-    return(
+    return (
         <>
-        <div className="w-full bg-black h-screen canvas_container">
-            <Canvas className="">
-              <OrbitControls zoomSpeed={0.8}  enableZoom={true} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
-                <ambientLight intensity="0.1" enableShadow={true} />
-                <directionalLight position={[-50, 80, 80]} intensity={0.6}  />
-                <directionalLight position={[10, -80, -80]} color={"black"} intensity={1}  />
-                    <Moon />
-                    <Marks/>
-                    <Stars/>
-                    <CurveLine/>
-                <Preload all />
-            </Canvas>  
-            <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">
-                <SpeedoMeter/>
-            </div>  
-            <div className='home_page'>
+            <div className="w-full bg-black h-screen canvas_container">
+                <Canvas className="">
+                    <OrbitControls zoomSpeed={0.8} enableZoom={true} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
+                    <ambientLight intensity="0.1" enableShadow={true} />
+                    <directionalLight position={[-50, 80, 80]} intensity={0.6} />
+                    <directionalLight position={[10, -80, -80]} color={"black"} intensity={1} />
+                    <Moon value = {age} />
+                    <Marks />
+                    <Stars />
+                    <CurveLine />
+                    <Preload all />
+                </Canvas> 
+                <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">
+                    <SpeedoMeter />
+                </div>
+                <div className="map_list">
+                    <ul>
+                        <li>
+                        <Select
+                            style={{
+                                height: 60,
+                                color: "white",
+                                border: "2px solid #4362ed",
+                                backgroundColor: "#4362ed"
+                            }}
+                            icon={{ fill: "white" }}
+                            value={age}
+                            onChange={(e) => setAge(e.target.value)}
+                        >
+                            <MenuItem value={"1"}>NormalMap</MenuItem>
+                            <MenuItem value={"2"}>NightMap</MenuItem>
+                            {/* <MenuItem value={3}>SpecularMap</MenuItem> */}
+                        </Select>
+                        </li>
+                    </ul>
+                </div>
+                <div className='home_page'>
                     {open ?
                         <Modal onClick={handleClick} /> : null
                     }
-{/* onClick={handleClick} */}
+                    {/* onClick={handleClick} */}
                 </div>
-            <div className='home_button' onClick={handleClick}><h1>Stellium </h1><span><BiRocket /></span>
-            {/* onClick={()=>navigate(`/`)} */}
-</div> 
-      </div>
+                <div className='home_button' onClick={handleClick}><h1>Stellium </h1><span><BiRocket /></span>
+                    {/* onClick={()=>navigate(`/`)} */}
+                </div>
+            </div>
         </>
     )
 }

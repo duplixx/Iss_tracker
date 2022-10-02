@@ -1,17 +1,28 @@
 import { Sphere,meshBasicMaterial,meshPhongMaterial,shaderMaterial,meshStandardMaterial,meshDepthMaterial, Html} from '@react-three/drei';
 import {TextureLoader} from "three/src/loaders/TextureLoader";
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 import moonTexture from '../assets/img/earth_large.jpg';
 import moonBumpTexture from '../assets/img/bump-large.jpg';
 import { useLoader } from '@react-three/fiber';
 import data from '../assets/data';
 import GeoLocation from './geoLocation';
+import NightMap from "../assets/img/NightMap.jpeg"
 
 
 
 
-export default function MappedMoon() {
-    const colorMap = useLoader(TextureLoader,moonTexture);
+export default function MappedMoon(props) {
+  console.log(props.value, typeof(props.value))
+  const [map, setMap] = useState(moonTexture)
+  useEffect(()=>{
+    if(props.value === "1"){
+      setMap(moonTexture)
+    }
+    if(props.value === "2"){
+      setMap(NightMap)
+    }
+  },[props.value])
+    const colorMap = useLoader(TextureLoader, map);
     const moonBumpMap= useLoader(TextureLoader,moonBumpTexture);
   return (
     <>
