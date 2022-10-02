@@ -4,6 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import Moon from "../components/mappedMoon";
 import Stars from "../components/stars";
 import Marks from '../components/marks';
+import Moon2 from "../components/mappedMoon2"
+import Moon3 from "../components/mappedMoon3"
 import { useNavigate } from "react-router-dom";
 import { BiRocket } from "react-icons/bi"
 import Modal from "../components/ModalPage"
@@ -32,7 +34,9 @@ export default function Canvas_page() {
                     <ambientLight intensity="0.1" enableShadow={true} />
                     <directionalLight position={[-50, 80, 80]} intensity={0.6} />
                     <directionalLight position={[10, -80, -80]} color={"black"} intensity={1} />
-                    <Moon value = {age} />
+                    {age === "1" && <Moon value = {age} />}
+                    {age === "2" && <Moon2 value = {age} />}
+                    {age === "3" && <Moon3 value = {age} />}
                     <Marks />
                     <Stars />
                     <CurveLine />
