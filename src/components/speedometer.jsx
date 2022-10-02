@@ -21,6 +21,7 @@ export default function SpeedoMeter() {
         if (guageFrame < totalFrames) {
             var deg = startDeg + easeInOutCubic(guageFrame, 0, degRange, totalFrames);
             var iteration = Math.floor(easeInOutCubic(guageFrame, 0, document.querySelectorAll('.js-guage-svg > path').length + 1 < 20 ? document.querySelectorAll('.js-guage-svg > path').length + 1 : 24, totalFrames));
+            speedo();
             document.querySelector('.js-needle').style.transform = 'rotateZ(' + deg + 'deg)';
             document.querySelector('.js-needle1').style.transform = 'rotateZ(' + deg + 'deg)';
             var iteration1 = Math.floor(easeInOutCubic(guageFrame, 0, document.querySelectorAll('.js-guage-svg1 > path').length + 1 < 20 ? document.querySelectorAll('.js-guage-svg1 > path').length + 1 : 24, totalFrames));
@@ -46,7 +47,6 @@ export default function SpeedoMeter() {
             // getSpeed();
         }, 2000);
         engageGuage();
-        speedo();
 
     }, []);
 

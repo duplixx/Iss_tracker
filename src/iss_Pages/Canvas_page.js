@@ -26,7 +26,6 @@ export default function Canvas_page() {
     const navigate = useNavigate()
     return (
         <>
-<<<<<<< Updated upstream
             <div className="w-full bg-black h-screen canvas_container">
                 <Canvas className="">
                     <OrbitControls zoomSpeed={0.8} enableZoom={true} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
@@ -73,38 +72,6 @@ export default function Canvas_page() {
                     {/* onClick={()=>navigate(`/`)} */}
                 </div>
             </div>
-=======
-        <div className="w-full bg-black h-screen">
-            <Canvas className="">
-              <OrbitControls zoomSpeed={0.8}  enableZoom={false} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
-                <ambientLight intensity="0.1" enableShadow={true} />
-                <directionalLight position={[-50, 80, 80]} intensity={0.6}  />
-                <directionalLight position={[10, -80, -80]} color={"black"} intensity={1}  />
-                    <Moon />
-                    <Marks/>
-                    <Stars/>
-                <Preload all />
-            </Canvas>  
-            <div className="absolute bottom-0 right-0 flex flex-end items-end justify-end p-4 w-[30%]">
-                <SpeedoMeter/>
-            </div>  
-            <div className='home_page'>
-                    {open ?
-                        <Modal onClick={handleClick} /> : null
-                    }
-{/* onClick={handleClick} */}
-            </div>
-            <div className="absolute top-4 left-4 form-control">
-                <label className="label cursor-pointer">
-                    <span className="label-text mr-2 text-lg">Dark</span>
-                    <input type="checkbox" className="invert toggle toggle-accent" value="Dark" />
-                </label>
-            </div>
-            <div className='home_button' onClick={handleClick}><h1>Stellium </h1><span><BiRocket /></span>
-            {/* onClick={()=>navigate(`/`)} */}
-            </div> 
-        </div>
->>>>>>> Stashed changes
         </>
     )
 }
