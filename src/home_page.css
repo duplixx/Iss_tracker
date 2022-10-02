@@ -13,7 +13,11 @@ body {
   overflow: visible;
   scroll-behavior: smooth;
   background-color: black;
+<<<<<<< Updated upstream
   /* font-family: 'Chopsic', monospace; */
+=======
+  font-family: 'Poppins', monospace;
+>>>>>>> Stashed changes
 }
 
 * {
