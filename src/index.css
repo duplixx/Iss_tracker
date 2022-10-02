@@ -481,3 +481,15 @@ font-size: 20px;
 .home_button:hover{
   transform: translate(0px, -4px); 
 }
+.modal_btn{
+  color: white;
+  background-color: #e21b1b;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+.map_list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

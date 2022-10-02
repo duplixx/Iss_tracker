@@ -57,19 +57,19 @@ export default function Canvas_page() {
                         >
                             <MenuItem value={"1"}>NormalMap</MenuItem>
                             <MenuItem value={"2"}>NightMap</MenuItem>
+                            <MenuItem value={"3"}>SpecularMap</MenuItem>
                             {/* <MenuItem value={3}>SpecularMap</MenuItem> */}
                         </Select>
                         </li>
                     </ul>
+                    <a className="modal_btn" onClick={handleClick}>Modal</a>
                 </div>
                 <div className='home_page'>
                     {open ?
                         <Modal onClick={handleClick} /> : null
                     }
-                    {/* onClick={handleClick} */}
                 </div>
-                <div className='home_button' onClick={handleClick}><h1>Stellium </h1><span><BiRocket /></span>
-                    {/* onClick={()=>navigate(`/`)} */}
+                <div className='home_button' onClick={()=>navigate(`/`)}><h1>Stellium </h1><span><BiRocket /></span>
                 </div>
             </div>
         </>
