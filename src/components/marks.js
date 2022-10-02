@@ -12,19 +12,19 @@ export default function Marks(props) {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // getLoc();
-        }, 2000);
+            getLoc();
+        }, 4000);
         return () => clearInterval(interval);   
 
     }, []);
 
     const getLoc = async () => {
         try {
-            const res = await axios.get("https://api.wheretheiss.at/v1/satellites/25544");
+            const res = await axios.get("http://api.open-notify.org/iss-now.json");
             console.log("The Data", res);
-            setLat(res.data.latitude);
-            setLon(res.data.longitude);
-            setAlt(res.data.altitude);
+            setLat(res.data.iss_position.latitude);
+            setLon(res.data.iss_position.longitude);
+            // setAlt(res.data.iss_position.altitude);
           } catch (error) {
             console.log("Error", error);
             // handle error
@@ -41,7 +41,7 @@ export default function Marks(props) {
 
 
         return (
-            <mesh visible position={[x,0.2+y,0.5+z]} layers={0}   >
+            <mesh visible position={[-0.2+x,-0.5+y,-0.5+z]} layers={0}   >
             <Satellite  layers={0} />
                 <Html occlude
                 onOcclude={occlude}

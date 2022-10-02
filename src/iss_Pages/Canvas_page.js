@@ -19,7 +19,6 @@ import { MapState } from "../context";
 import {ImCross} from "react-icons/im"
 
 export default function Canvas_page() {
-
     const [open, setOpen] = useState(false)
     const handleClick = () => {
         setOpen(prev => !prev)

@@ -4,7 +4,7 @@ import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, H
 export default function curveLine() {
     // ellipse formula
     var a,b;
-    a = 1.2;
+    a = 1.3;
     b = 1.04;
     var x1 = a * Math.cos(0);
     var y1 = b * Math.sin(0);
@@ -28,7 +28,7 @@ export default function curveLine() {
     <>
     <mesh visible layer={0}>
     <CubicBezierLine 
-    position={[0,0,-0.1]} rotation={[10,0,0]}
+    position={[0,0,0.01]} rotation={[0,0,0]}
     points={path}
     start={[0,0,0]}
     end={[0,0,0]}
