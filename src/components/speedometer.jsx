@@ -44,7 +44,7 @@ export default function SpeedoMeter() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            // getSpeed();
+            getSpeed();
         }, 2000);
         engageGuage();
 
@@ -53,8 +53,8 @@ export default function SpeedoMeter() {
     const getSpeed = async () => {
         try {
             const res = await axios.get("https://api.wheretheiss.at/v1/satellites/25544");
-            setSpeed(res.data.velocity.toFixed(2));
-            setAlt(res.data.altitude.toFixed(2));
+            setSpeed(Math.round(res.data.velocity));
+            setAlt(Math.round(res.data.altitude));
         } catch (error) {
             console.log("Error", error);
 
@@ -203,7 +203,7 @@ export default function SpeedoMeter() {
                     </svg>
                     <div className="js-needle rounded-t-[50%] origin-bottom h-[50%] absolute left-[45%] bottom-[35%] w-[3%] bg-white rotate-[90]" />
                 </div>
-                <span className="font-sans text-white text-2xl font-bold">{speed}</span>
+                <span className="font-sans text-white text-2xl font-bold">{speed} km/h</span>
                 
             </div>
             <div className="w-[50%] text-center ">
@@ -346,7 +346,7 @@ export default function SpeedoMeter() {
                     </svg>
                     <div className="js-needle1 rounded-t-[50%] origin-bottom h-[50%] absolute left-[45%] bottom-[35%] w-[3%] bg-white rotate-[90]" />
                 </div>
-                <span className="font-sans text-white text-2xl font-bold">{alt}</span>
+                <span className="font-sans text-white text-2xl font-bold">{alt}&#176;</span>
             </div>
             
         </>

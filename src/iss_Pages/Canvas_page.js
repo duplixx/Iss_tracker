@@ -41,6 +41,9 @@ export default function Canvas_page() {
                 <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">
                     <SpeedoMeter />
                 </div>
+                <div className="absolute top-0 left-0 flex flex-end justify-end  p-4">
+                <GeoLocation />
+                </div>
                 <div className="map_list">
                     <ul>
                         <li>
