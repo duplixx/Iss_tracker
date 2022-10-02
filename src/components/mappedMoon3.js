@@ -12,21 +12,21 @@ import SpecularMap from "../assets/img/specular_map.jpeg"
 
 
 
-export default function MappedMoon(props) {
-  // console.log(props.value, typeof(props.value))
-  // const [map, setMap] = useState(moonTexture)
-  // useEffect(()=>{
-  //   if(props.value === "1"){
-  //     setMap(moonTexture)
-  //   }
-  //   if(props.value === "2"){
-  //     setMap(NightMap)
-  //   }
-  //   if(props.value === "3"){
-  //     setMap(SpecularMap)
-  //   }
-  // },[props.value])
-    const colorMap = useLoader(TextureLoader, moonTexture);
+export default function MappedMoon3(props) {
+//   console.log(props.value, typeof(props.value))
+//   const [map, setMap] = useState(moonTexture)
+//   useEffect(()=>{
+//     if(props.value === "1"){
+//       setMap(moonTexture)
+//     }
+//     if(props.value === "2"){
+//       setMap(NightMap)
+//     }
+//     if(props.value === "3"){
+//       setMap(SpecularMap)
+//     }
+//   },[props.value])
+    const colorMap = useLoader(TextureLoader, SpecularMap);
     const moonBumpMap= useLoader(TextureLoader,moonBumpTexture);
   return (
     <>
