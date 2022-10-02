@@ -62,7 +62,7 @@ export default function Canvas_page() {
                         </Select>
                         </li>
                     </ul>
-                    <a className="modal_btn" onClick={handleClick}>Modal</a>
+                    <a className="modal_btn" onClick={handleClick}>Evolution</a>
                 </div>
                 <div className='home_page'>
                     {open ?
