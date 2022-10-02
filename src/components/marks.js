@@ -12,7 +12,7 @@ export default function Marks(props) {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            getLoc();
+            // getLoc();
         }, 2000);
         return () => clearInterval(interval);   
 

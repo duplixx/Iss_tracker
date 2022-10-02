@@ -41,7 +41,7 @@ export default function SpeedoMeter() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            getSpeed();
+            // getSpeed();
         }, 2000);
         engageGuage();
         speedo();
@@ -55,6 +55,7 @@ export default function SpeedoMeter() {
             setAlt(res.data.altitude.toFixed(2));
         } catch (error) {
             console.log("Error", error);
+
             // handle error
         }
     }
