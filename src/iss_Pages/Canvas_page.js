@@ -16,6 +16,7 @@ import CurveLine from "../components/curveline";
 import GeoLocation from "../components/geoLocation";
 import { MenuItem, Select } from "@mui/material"
 import { MapState } from "../context";
+import {ImCross} from "react-icons/im"
 
 export default function Canvas_page() {
 
@@ -69,7 +70,7 @@ export default function Canvas_page() {
                         </Select>
                         </li>
                     </ul>
-                    <a className="modal_btn" onClick={handleClick}>Evolution</a>
+                    <a className="modal_btn" onClick={handleClick}> {!open? "Evolution" :<ImCross/>}</a>
                 </div>
                 <div className='home_page'>
                     {open ?
