@@ -22,7 +22,7 @@ export default function Canvas_page() {
     const navigate = useNavigate()
     return(
         <>
-        <div className="w-full bg-black h-screen">
+        <div className="w-full bg-black h-screen canvas_container">
             <Canvas className="">
               <OrbitControls zoomSpeed={0.8}  enableZoom={true} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
                 <ambientLight intensity="0.1" enableShadow={true} />

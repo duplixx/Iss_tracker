@@ -26,11 +26,13 @@ code {
   background-color: rgb(241, 238, 238);
   height: 100vh;
 }
-
+.canvas_container{
+  position: relative;
+}
 
 
 /* Main_PAGE starts */
- .main_page{
+ /*.main_page{
   width: 80%;
   position: relative;
   overflow-x: hidden;
@@ -429,7 +431,19 @@ input {
     width: 500px;
     margin-right: 20px;
   }
-} 
+} */
+.home_page {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  height: 100vh;
+
+  z-index: 100;
+}
 
 
 .home_button h1, .canvas_button h1{
