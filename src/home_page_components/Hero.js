@@ -36,7 +36,7 @@ export default function Hero() {
                 end: "+=900",
                 scrub: 1,
                 toggleActions: "restart pause reverse pause",
-                
+
             },
             background: 'black',
             color: 'white',
@@ -100,14 +100,14 @@ export default function Hero() {
 
         // Team section - Team members card animation of scale and opacity on scroll
 
-        gsap.fromTo(".right_team_section", { scale:0.4, opacity: 0 }, {
+        gsap.fromTo(".right_team_section", { scale: 0.4, opacity: 0 }, {
             scrollTrigger: {
                 trigger: ".team_section",
                 end: "+=600px",
                 toggleActions: "restart pause pause pause", scrub: 1,
             },
             color: 'white',
-            scale:1,
+            scale: 1,
             opacity: 1,
             duration: 1.4,
             ease: "none"
@@ -118,17 +118,17 @@ export default function Hero() {
 
         // Story section to show hiding effect on scroll 
 
-        gsap.fromTo(".story_section", {opacity:1.9}, {
-            scrollTrigger:{
-                trigger:".story_section",
+        gsap.fromTo(".story_section", { opacity: 1.9 }, {
+            scrollTrigger: {
+                trigger: ".story_section",
                 toggleActions: "restart pause pause pause", scrub: 1,
             },
-            opacity:0,
+            opacity: 0,
             ease: "none",
             ease: Power3.easeInOut,
-            duration:0.1
+            duration: 0.1
         })
-        
+
     }, [])
 
     // Using state to animate hero section 
@@ -186,14 +186,14 @@ export default function Hero() {
                     <h1 className="title self-start">
                         Iss Tracker
                     </h1>
-                    <a className="_button flex hover:justify-between" onClick={()=>navigate(`/mainPage`)} >Track Iss <AiOutlineArrowRight className="inline-block self-center" />  </a>
+                    <a className="_button flex hover:justify-between" onClick={() => navigate(`/mainPage`)} >Track Iss <AiOutlineArrowRight className="inline-block self-center" />  </a>
                 </div>
                 {
                     show &&
 
-                        <video className="hero_vid" autoPlay muted>
-                            <source src={vid} type="video/mp4" />
-                        </video>
+                    <video className="hero_vid" autoPlay muted>
+                        <source src={vid} type="video/mp4" />
+                    </video>
 
                 }
                 {
@@ -202,15 +202,15 @@ export default function Hero() {
 
 
 
-                            <div className="img1" id="home">
+                        <div className="img1" id="home">
 
-                            </div>
-                            <Parallax className="img2" translateY={[0, -40]}>
-                            </Parallax>
-                            <Parallax className="img3" translateX={[35, -40]}>
-                            </Parallax>
-                            <Parallax translateY={[40, -80]} translateX={[30,-30]} className="img4">
-                            </Parallax>
+                        </div>
+                        <Parallax className="img2" translateY={[0, -40]}>
+                        </Parallax>
+                        <Parallax className="img3" translateX={[35, -40]}>
+                        </Parallax>
+                        <Parallax translateY={[40, -80]} translateX={[30, -30]} className="img4">
+                        </Parallax>
                     </ParallaxProvider>
                 }
             </div>
@@ -229,21 +229,22 @@ export default function Hero() {
                 </div>
                 <div className="right_section2" >
                     <div>
-                        <h6 className="small_title">The small</h6>
-                        <h6 className="next_small_title">Business Specialist</h6>
+                        <h6 className="small_title">STELLIUM</h6>
+                        {/* <h6 className="next_small_title">Business Specialist</h6> */}
                     </div>
                     <div>
-                        <h4>A Creative,Digital Company</h4>
-                        <h4>Watch the space agency</h4>
+                        <h4>ISS TRACKER</h4>
+                        {/* <h4>Watch the space agency</h4> */}
                     </div>
                     <div>
-                        <p className="first_p">We build awesome websites designed from scratch, together with performance focused digital marketing campaigns to take you out into the world.</p>
+                        <p className="first_p">We have built a web application to track space station offering multiplying features and capabilities over conventional trackers. Unlike the old bidimensional trackers that don't support 3D depictions or visualize stations as a dot or 2D models, our application would be fully accessible via a browser.</p>
                     </div>
                     <div>
-                        <p className="last_p">Proudly a 'little' agency, we exclusively serve individuals, startups and small to medium scale companies through our portfolio of affordable, packaged services. Our offerings are designed to give you great options to get started or you could reach out for a custom quote if you want to reach the stars with us!</p>
+                        <p className="last_p">This application further would be equipped with the ability to calculate and display the station's speed and its height above the earth. It contain the ability to differentiate between day and night by using the 3D concept repo. Also it will be capable of measuring the latitude and longitude using yet another container.</p>
                     </div>
                     <div>
-                        <p className="first_p">Get in touch, and let’s build awesome together.</p>
+                        <p className="first_p">
+                            The user would also be able to enjoy a feature by which the real-time positioning of the space station will be feasible.</p>
                     </div>
                 </div>
             </div>
@@ -253,7 +254,7 @@ export default function Hero() {
             {/* Story Section Starts  */}
 
 
-            <Story/>
+            <Story />
 
 
             {/* Story Section Ends  */}
@@ -271,9 +272,9 @@ export default function Hero() {
             {/* Footer Section Starts  */}
 
 
-            <Footer/>
+            <Footer />
 
-            
+
             {/* Footer Section Ends  */}
         </>
     )
