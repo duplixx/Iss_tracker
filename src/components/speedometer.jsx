@@ -42,7 +42,7 @@ export default function SpeedoMeter() {
     useEffect(() => {
         const interval = setInterval(() => {
             getSpeed();
-        }, 1000);
+        }, 2000);
         engageGuage();
         speedo();
 

@@ -10,6 +10,8 @@ import Modal from "../components/ModalPage"
 import { useState } from "react";
 import "../index.css"
 import SpeedoMeter from "../components/speedometer";
+import CurveLine from "../components/curveline";
+import GeoLocation from "../components/geoLocation";
  
 export default function Canvas_page() {
     
@@ -22,13 +24,14 @@ export default function Canvas_page() {
         <>
         <div className="w-full bg-black h-screen">
             <Canvas className="">
-              <OrbitControls zoomSpeed={0.8}  enableZoom={false} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
+              <OrbitControls zoomSpeed={0.8}  enableZoom={true} autoRotate={true} autoRotateSpeed={0.6} minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 180} />
                 <ambientLight intensity="0.1" enableShadow={true} />
                 <directionalLight position={[-50, 80, 80]} intensity={0.6}  />
                 <directionalLight position={[10, -80, -80]} color={"black"} intensity={1}  />
                     <Moon />
                     <Marks/>
                     <Stars/>
+                    <CurveLine/>
                 <Preload all />
             </Canvas>  
             <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">

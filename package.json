@@ -19,6 +19,8 @@
     "react-dom": "^18.2.0",
     "react-globe.gl": "^2.22.4",
     "react-icons": "^4.4.0",
+    "react-leaflet": "^4.1.0",
+    "react-leaflet-curve": "^2.0.1",
     "react-parallax": "^3.5.1",
     "react-parallax-tilt": "^1.7.67",
     "react-particles": "^2.3.1",

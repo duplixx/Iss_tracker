@@ -1,10 +1,7 @@
-import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html, CubicBezierLine } from '@react-three/drei';
+import { Sphere, meshBasicMaterial, sphereBufferGeometry, QuadraticBezierLine, Html, CubicBezierLine,Line, Circle } from '@react-three/drei';
 import axios from 'axios';
 import React, { useState,useEffect } from 'react';
-import { Side } from 'three';
-import data from '../assets/data';
 import { Satellite } from './Satellite';
-import { BasisCurve } from 'react-svg-curve';
 
 export default function Marks(props) {
     const [lat,setLat]=useState(0);
@@ -16,14 +13,13 @@ export default function Marks(props) {
     useEffect(() => {
         const interval = setInterval(() => {
             getLoc();
-        }, 1000);
+        }, 2000);
         return () => clearInterval(interval);   
 
     }, []);
 
     const getLoc = async () => {
         try {
-
             const res = await axios.get("https://api.wheretheiss.at/v1/satellites/25544");
             console.log("The Data", res);
             setLat(res.data.latitude);
@@ -39,7 +35,9 @@ export default function Marks(props) {
         var x = -(Math.sin(phi) * Math.cos(theta));
         var z = (Math.sin(phi) * Math.sin(theta));
         var y = (Math.cos(phi));
-        // passing names in props
+
+       
+        // // passing names in props    
 
 
         return (
@@ -54,12 +52,9 @@ export default function Marks(props) {
                         <h1 className='absolute rounded-full  p-2 border-gray-200 border-2 delay-200'/>
                     </span>
                 </Html> 
-                <Html>
-                    
-
-                </Html>
-                 
             </mesh>
+            
+
             
             
         )
