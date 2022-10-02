@@ -13,7 +13,7 @@ body {
   overflow: visible;
   scroll-behavior: smooth;
   background-color: black;
-  font-family: 'Chopsic', monospace;
+  /* font-family: 'Chopsic', monospace; */
 }
 
 * {
