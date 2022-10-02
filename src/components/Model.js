@@ -32,7 +32,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model2}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -46,7 +46,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model3}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -60,7 +60,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model4}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -74,7 +74,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model5}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -88,7 +88,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model6}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -102,7 +102,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model7}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             
@@ -116,7 +116,7 @@ export default function Model(props) {
                 camera-orbit="-30deg auto auto" max-camera-orbit="auto 100deg auto" shadow-intensity="1" camera-controls touch-action="pan-y" disable-zoom 
                 src={Model8}
                 auto-rotate
-                style={{ width: "600px", height: "600px"}}
+                style={{ width: "400px", height: "400px"}}
             >
             </model-viewer>
             

@@ -3,8 +3,8 @@ const data = [
                 "id": "1",
                 "name": "ISS Zarya",
                 "year": "1998",
-                "about1": "Zarya has a mass of 19,323 kilograms (42,600 lb), is 12.56 meters (41.2 ft) long and 4.11 meters (13.5 ft) wide at its widest point.",
-                "about2": "Zarya was launched on 20 November 1998 on a Russian Proton rocket from Baikonur Cosmodrome Site 81 in Kazakhstan to a 400 km (250 mi) high orbit with a designed lifetime of at least 15 years. After Zarya reached orbit, STS-88 launched on 4 December 1998 to attach the Unity module.",
+                "about1": "Zarya has a mass of 19,323 kilograms (42,600 lb), is 12.56 meters (41.2 ft) long and 4.11 meters (13.5 ft) wide at its widest point. After Zarya reached orbit, STS-88 launched on 4 December 1998 to attach the Unity module.",
+                "about2": "Zarya was launched on 20 November 1998 on a Russian Proton rocket from Baikonur Cosmodrome Site 81 in Kazakhstan to a 400 km (250 mi) high orbit with a designed lifetime of at least 15 years.",
         },
         {
                 "id": "2",

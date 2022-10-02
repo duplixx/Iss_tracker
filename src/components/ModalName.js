@@ -3,7 +3,7 @@ export default function ModalName(props) {
     if(props.count === 1){
     return(
         <h1 className="row-start-1 col-start-2 text-[46px] font-bold">
-                    ISS Zarya 1988
+                    ISS Zarya 1998
                 </h1>
     )}
     if(props.count === 2){
@@ -32,7 +32,7 @@ export default function ModalName(props) {
     )}
     if(props.count === 6){
     return(
-        <h1 className="row-start-1 col-start-2 text-[46px] font-bold">
+        <h1 className="row-start-1 col-start-2 text-[46px] text-wrap whitespace-nowrap font-bold">
                     ISS Columbus 2008
                 </h1>
     )}
