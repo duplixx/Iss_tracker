@@ -28,7 +28,7 @@ export default function curveLine() {
     <>
     <mesh visible layer={0}>
     <CubicBezierLine 
-    position={[0,0,0.01]} rotation={[0,0,0]}
+    position={[0,0,0.01]} rotation={[0,10,0]}
     points={path}
     start={[0,0,0]}
     end={[0,0,0]}

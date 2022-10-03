@@ -39,7 +39,6 @@ export default function Canvas_page() {
                     {age === "3" && <Moon3 value = {age} />}
                     <Marks />
                     <Stars />
-                    <CurveLine />
                     <Preload all />
                 </Canvas> 
                 <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">
