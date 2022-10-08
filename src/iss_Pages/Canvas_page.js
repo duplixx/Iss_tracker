@@ -4,8 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import Moon from "../components/mappedMoon";
 import Stars from "../components/stars";
 import Marks from '../components/marks';
-import Moon2 from "../components/mappedMoon2"
-import Moon3 from "../components/mappedMoon3"
+import Moon2 from "../components/NightMode"
+import Moon3 from "../components/SkeletonView"
 import { useNavigate } from "react-router-dom";
 import { BiRocket } from "react-icons/bi"
 import Modal from "../components/ModalPage"

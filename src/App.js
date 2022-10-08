@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Preloader from './components/Preloader';
 import Canvas_page from "./iss_Pages/Canvas_page"

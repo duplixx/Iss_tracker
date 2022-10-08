@@ -1,5 +1,4 @@
 import { Sphere} from '@react-three/drei';
-import meshBasicMaterial from '@react-three/drei';
 import {TextureLoader} from "three/src/loaders/TextureLoader";
 import React from 'react';
 import moonBumpTexture from '../assets/img/bump-large.jpg';
