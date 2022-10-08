@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c05a523b.css",
+    "main.js": "/static/js/main.6a669c33.js",
+    "static/media/iss_2007.glb": "/static/media/iss_2007.a0d2629233ab55562cbf.glb",
+    "static/media/iss_2002.glb": "/static/media/iss_2002.0de8446fc2d99d0b1204.glb",
+    "static/media/iss_2001.glb": "/static/media/iss_2001.8deb91fdaf8be3634b0c.glb",
+    "static/media/iss_2010.glb": "/static/media/iss_2010.09ed3c8f2a278d0dae0c.glb",
+    "static/media/iss_2012.glb": "/static/media/iss_2012.b375df467a38c492e54b.glb",
+    "static/media/iss_2008.glb": "/static/media/iss_2008.15bdb816b04d7d9688a4.glb",
+    "static/media/iss_2000.glb": "/static/media/iss_2000.b06f0db6d9e3826adc90.glb",
+    "static/media/iss_1998.glb": "/static/media/iss_1998.4acc5b025eec6420fc56.glb",
+    "static/media/team_background.jpeg": "/static/media/team_background.8b7141bc67c6cb9fabca.jpeg",
+    "static/media/preloader.mp4": "/static/media/preloader.b1f670b1c2567dbb5e3d.mp4",
+    "static/media/story_background.jpeg": "/static/media/story_background.125ef616c7dfa7fbfff8.jpeg",
+    "static/media/sankalp.jpg": "/static/media/sankalp.5f0ede0a6a09d413a4a2.jpg",
+    "static/media/anshul.jpg": "/static/media/anshul.e5378aa194acbf741a7a.jpg",
+    "static/media/shekhar.jpg": "/static/media/shekhar.698ae5cf9a354f634728.jpg",
+    "static/media/hero_background_vid.mp4": "/static/media/hero_background_vid.18fd0abaca93f8e3394f.mp4",
+    "static/media/mihir.jpg": "/static/media/mihir.cb5a6a5ec26a418d3b2b.jpg",
+    "static/media/jasmine.jpg": "/static/media/jasmine.ebc6fd990a587b1d2e79.jpg",
+    "static/media/earth_large.jpg": "/static/media/earth_large.b1a1ed4fe0a37d45b0cd.jpg",
+    "static/media/galaxy_4k.png": "/static/media/galaxy_4k.465636b28a4dc1d55a28.png",
+    "static/media/bump-large.jpg": "/static/media/bump-large.a528dc07db214eef2886.jpg",
+    "static/media/earth_background.webp": "/static/media/earth_background.230b4d3d1fe6b72d3faa.webp",
+    "static/media/NightMap.jpeg": "/static/media/NightMap.36f11e5e8af29fc1457e.jpeg",
+    "static/media/specular_map.jpeg": "/static/media/specular_map.de08296c47c6b9edd5c0.jpeg",
+    "static/media/star_background.webp": "/static/media/star_background.b17682d66617bc9eae40.webp",
+    "static/media/hero_background.webp": "/static/media/hero_background.b914fd2ddea716bb9384.webp",
+    "static/media/thumbnail.jpeg": "/static/media/thumbnail.ef57c04a58803239ea2e.jpeg",
+    "static/media/idk_background.webp": "/static/media/idk_background.f3939ee249b072bb51d2.webp",
+    "index.html": "/index.html",
+    "main.c05a523b.css.map": "/static/css/main.c05a523b.css.map",
+    "main.6a669c33.js.map": "/static/js/main.6a669c33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c05a523b.css",
+    "static/js/main.6a669c33.js"
+  ]
+}
