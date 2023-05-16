@@ -42,33 +42,33 @@ export default function Canvas_page() {
                     <Preload all />
                 </Canvas> 
                 <div className="absolute bottom-0 right-0 flex flex-end justify-end  p-4">
-                    <SpeedoMeter />
+                    <SpeedoMeter className="border-2 border-white"/>
                 </div>
                 <div className="absolute top-0 left-0 flex flex-end justify-end  p-4">
-                <GeoLocation />
+                <GeoLocation/>
                 </div>
-                <div className="map_list">
+                <div className="map_list flex ">
                     <ul>
                         <li>
+                        <a className="modal_btn bg-slate-300 p-x-2"  onClick={handleClick}> {!open? "Evolution" :<ImCross/>}</a>
+                        </li>
+                        <li>
+                        
                         <Select
-                            style={{
-                                height: 60,
-                                color: "white",
-                                border: "2px solid #4362ed",
-                                backgroundColor: "#4362ed"
-                            }}
-                            icon={{ fill: "white" }}
+                            // 
+                            className="btn  shadow-white hover:shadow-blue-400 hover:background-slate-250 hover:text-white text-black bg-white ease-out hover:translate-y-1 transition-all rounded"
                             value={age}
                             onChange={(e) => setAge(e.target.value)}
                         >
-                            <MenuItem value={"1"}>NormalMap</MenuItem>
-                            <MenuItem value={"2"}>NightMap</MenuItem>
-                            <MenuItem value={"3"}>SpecularMap</MenuItem>
+                            <MenuItem value={"1"}>Normal</MenuItem>
+                            <MenuItem value={"2"}>Night</MenuItem>
+                            <MenuItem value={"3"}>Specular</MenuItem>
                             {/* <MenuItem value={3}>SpecularMap</MenuItem> */}
                         </Select>
+
                         </li>
+                        
                     </ul>
-                    <a className="modal_btn" onClick={handleClick}> {!open? "Evolution" :<ImCross/>}</a>
                 </div>
                 <div className='home_page'>
                     {open ?

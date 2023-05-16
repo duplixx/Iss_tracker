@@ -9,7 +9,7 @@ const App = () => {
     setLoader(true)
     setTimeout(() => {
       setLoader(false)
-    }, 11000);
+    }, 100);
   }, [])
 
   return (
